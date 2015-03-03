@@ -6,7 +6,7 @@ title: "Gentle Introduction to Linux"
 
 Download the slides I presented with:
 
-- {{site.baseurl}}/files/slides_gentle_intro_to_linux_march_2015.pdf
+- http://pipitone.github.io/computing-skills/files/slides_gentle_intro_to_linux_march_2015.pdf
 
 
 ### Operating Systems
