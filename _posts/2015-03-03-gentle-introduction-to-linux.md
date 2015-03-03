@@ -4,6 +4,11 @@ layout: post
 title: "Gentle Introduction to Linux"
 ---
 
+Download the slides I presented with:
+
+- {{site.baseurl}}/files/slides_gentle_intro_to_linux_march_2015.pdf
+
+
 ### Operating Systems
 
 An operating system (OS) is one of the most basic bits of software that sits
