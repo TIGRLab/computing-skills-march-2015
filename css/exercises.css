@@ -1,0 +1,16 @@
+/** Styles for writing answers that are revealed on hover 
+    e.g. Answer: <span class="reveal">42!</span>
+*/
+.reveal, .reveal *, .reveal code {
+  background: black;
+  color: black;
+}
+.reveal:hover, .reveal:hover * {
+  background: white;
+  color: black;
+}
+.reveal:hover code {
+  background: #f9f2f4;
+  color: #c7254e;
+}
+

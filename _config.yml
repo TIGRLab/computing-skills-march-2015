@@ -1,0 +1,19 @@
+#markdown: redcarpet
+
+#redcarpet:
+#  extensions: []
+
+#permalink: pretty
+
+title: CAMH Computing Skills 2015
+description: "You need these skills, because software is your experimental apparatus."
+baseurl: /computing-skills
+
+author:         
+  name: 'Jon Pipitone'
+  url:  http://github.com/pipitone
+  github: pipitone
+  email: jon.pipitone@camh.ca
+
+github:
+  repo: https://github.com/pipitone/computing-skills
