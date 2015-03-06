@@ -1,9 +1,3 @@
-#markdown: redcarpet
-
-#redcarpet:
-#  extensions: []
-
-#permalink: pretty
 
 title: CAMH Computing Skills 2015
 description: "You need these skills, because software is your experimental apparatus."
@@ -17,3 +11,9 @@ author:
 
 github:
   repo: https://github.com/pipitone/computing-skills
+
+permalink: pretty
+#markdown: redcarpet
+#redcarpet:
+#  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "strikethrough", "superscript", "with_toc_data"]
+#
