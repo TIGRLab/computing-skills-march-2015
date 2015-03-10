@@ -1,0 +1,89 @@
+---
+layout: default
+title: "Introduction to the Shell"
+---
+
+<section class="content">
+
+<h1> A BASH cheat sheet</h1>
+<table class="table"><thead>
+    <tr>
+      <th>Task</th>
+      <th>Command</th>
+    </tr>
+  </thead><tbody>
+  <tr>
+    <td>Show your current path</td>
+    <td><code>pwd</code></td>
+  </tr>
+  <tr>
+    <td>List the contents of a folder</td>
+    <td><code>ls</code>, eg. <code>ls</code> or <code>ls /home</code></td>
+  </tr>
+  <tr>
+    <td>Change directory</td>
+    <td><code>cd directory</code>, e.g. <code>cd /home/</code></td>
+  </tr>
+  <tr>
+    <td>Move/rename a file</td>
+    <td><code>mv from to</code>, e.g. <code>mv data/genome.dat genomes/S001_genome.dat</code></td>
+  </tr>
+  <tr>
+    <td>Remove a file</td>
+    <td><code>rm file</code> or <code>rm -rf dir/</code>; use <code>-i</code> for confirmation</td>
+  </tr>
+  <tr>
+    <td>Make an empty file</td>
+    <td><code>touch</code>, e.g. <code>touch commands.sh</code></td>
+  </tr>
+  <tr>
+    <td>Edit a file</td>
+    <td><code>nano file</code>, e.g. <code>nano commands.sh</code></td>
+  </tr>
+  <tr>
+    <td>Show contents of a file</td>
+    <td><code>cat file</code> or <code>less file</code>, e.g. <code>cat commands.sh</code></td>
+  </tr>
+  <tr>
+    <td>History of commands</td>
+    <td><code>history</code>, or the arrow keys</td>
+  </tr>
+  <tr>
+    <td>Command help</td>
+    <td><code>man command</code>, or <code>command --help</code>, or <code>command -h</code></td>
+  </tr>
+  <tr>
+    <td>Connect to remote computer</td>
+    <td><code>ssh username@hostname</code>, e.g. <code>ssh jp@scc.camh.net</code></td>
+  </tr>
+  <tr>
+    <td>Number of lines in a file</td>
+    <td><code>wc -l file</code></td>
+  </tr>
+  <tr>
+    <td>Sort lines in a file</td>
+    <td><code>sort file</code>, or numerically <code>sort -n file</code></td>
+  </tr>
+  <tr>
+    <td>Find lines in a file</td>
+    <td><code>grep pattern file</code>, e.g. <code>grep M demographics.csv</code></td>
+  </tr>
+  <tr>
+    <td>Connect commands together</td>
+    <td><code>command1 | command2</code>, e.g. <code>grep M file | sort</code></td>
+  </tr>
+  <tr>
+    <td>Save output to a file</td>
+    <td><code>command &gt; file</code>, e.g. <code>sort file &gt; sorted-file.txt</code></td>
+  </tr>
+  <tr>
+    <td>Loop through a list</td>
+    <td><code>for var in list; do stuff; done</code> e.g. <code>for i in 1 2 3; do echo ${i}; done</code></td>
+  </tr>
+  <tr>
+    <td>Find the last part of a path</td>
+    <td><code>basename path</code>, e.g. <code>basename data/S013</code></td>
+  </tr>
+</tbody></table>
+
+</section>

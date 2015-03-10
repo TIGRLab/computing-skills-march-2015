@@ -173,11 +173,12 @@ the lines by sex.
 Next, we'll save the concatenated data into a file by *redirecting* the output
 of the command into a file using the `>` operator. 
 
-    ```sh
-    cat *files* > master.csv
-    ```
-  The `>` operator takes anything the command before it prints out and prints
-  it to the named file instead of displaying it on the terminal.
+```sh
+cat *files* > master.csv
+```
+
+The `>` operator takes anything the command before it prints out and prints
+it to the named file instead of displaying it on the terminal.
 
 - Q: How would you save just the male demographic data to a file? 
 
@@ -212,11 +213,201 @@ folder, all of your imaging data together in another, etc).
     > ...
     > ```
 
-We need a way to rename our files automatically. And this is where a loop comes
-in handy. 
+We need a way to rename our files automatically, one by one. And this is where
+a loop comes in handy. 
+
+For example, here is a list that prints numbers 1-5: 
 
 ```sh
-for variable in list 
+$ for i in 1 2 3 4 5 
+  do
+    echo ${i}        # gets run for each number
+  done
+```
+
+A few new things here: 
+
+- `i` is called the "loop variable", each time through the loop, `i` takes on
+  a different value from the list. 
+
+- The list of things `i` takes turns getting set to is everything after the
+  `in`.
+
+- All lines between `do` and `done` get run once for each value of `i`
+
+- `${i}` is shell-speak for "the value of `i`". Get it? `$` equals "value"... :-) 
+
+- Q: How would you print out the letters `a` through `e`. 
+      > ```sh
+      > $ for j in a b c d e f 
+      >   do
+      >     echo ${j}
+      >   done
+      > ```
+
+The list in a for-loop can also be made up of a wildcard that matches files.
+So, for instance you can loop through all of the files and folders in your
+current working directory like so: 
+
+```sh
+$ for path in * 
+  do
+    echo Found: ${path}
+    ls -l ${path}
+  done
+```
+
+- Q: Using a for-loop, print out all of the folders in the `data/` directory.
+      > ```sh
+      > $ for folder in data/*
+      >   do
+      >     print ${folder}
+      >   done
+      > ```
+
+- Q: Using a for-loop, print out the number of lines for each of the genome.dat
+files. 
+      > ```sh
+      > $ for i in data/*/genome.dat
+      >   do
+      >     wc -l ${i}
+      >   done
+      > ```
+
+    You could have also done this like so: 
+      > ```sh
+      > $ for i in data/*
+      >   do
+      >     wc -l ${i}/genome.dat
+      >   done
+      > ```
+
+Okay, we're ready to move and rename some files. We'll first do it in a bit of
+a cumbersome way, and then show you how to do it more easily. 
+
+1. First `cd` into your `data/` folder. 
+2. From your `data/` folder, how would you copy subject S045's `genome.dat`
+   file into the `genomes` folder?
+
+     > ```sh
+     > $ cp S045/genome.dat ../genomes
+     > ```
+3. Write a for-loop that prints the names of all of your subject folders.
+   (hint: you just did this a few moments ago :-)
+
+     > ```sh
+     > $ for i in *; do 
+     >     echo ${i}
+     >   done
+     > ```
+4. Edit the for-loop to `echo` a command to `cp` the `genome.dat` file from
+   each subject folder to the `genomes` folder. 
+
+     > ```sh
+     > $ for i in *; do 
+     >     echo cp ${i}/genome.dat ../genomes
+     >   done
+     > ```
+5. The last thing we need to do is give our file a new name once it is in
+   `../genomes`. Since`${i}` is the name of our subject, we can use that in our
+   name. Edit the for loop to copy each subject's `genome.dat` file to
+   `S045_genome.dat`, etc. 
+
+     > ```sh
+     > $ for i in *; do 
+     >     echo cp ${i}/genome.dat ../genomes/${i}_genome.dat
+     >   done
+     > ```
+6. Okay, remove the `echo` and run your for-loop for real!
+
+### Scripts
+
+If you put shell commands in a text file (a so-called "shell script"), you can
+easily re-run those commands: 
+
+```sh
+$ bash commands.sh    # this runs everything in commands.sh
+```
+
+The convention is to name our shell scripts with a `.sh` ending. 
+
+- Q: Using nano, make a script file called `organise_genomes.sh` in your
+  project folder that does two things: a) makes the `genomes` folder, and b)
+  copies your genome data into that folder. 
+
+     > ```sh
+     > $ cat organize_genomes.sh
+     > mkdir -p genomes     # -p tells mkdir to be quietly if the folder exists
+     > cd data/
+     > for i in *; do 
+     >     cp ${i}/genome.dat ../genomes/${i}_genome.dat
+     > done
+     > ```
+
+- Q: Remove your `genomes` folder, and run the `organize_genomes.sh` script. 
+
+    > ```sh
+    > $ rm -rf genomes/
+    > $ bash organize_genomes.sh
+    > ```
+
+#### Bonus section
+The last thing we'll do is a bit more advanced, but will make your script
+friendlier since it won't need to `cd` into your `data/` folder in order to
+work. 
+
+There is another command called `basename` which, given a path, returns the
+last part of the path, either a filename or deepest folder in the path. For
+example, 
+
+```sh
+$ basename data/S000/genome.dat
+genome.dat
+$ basename data/S000
+S000
+```
+
+One other trick. At any point in a shell script you can call another command
+and get its value by putting that command inside parentheses,`$(...)`. For example, 
+
+```sh
+$ echo The time is $(date) right now
+The time is Tue Mar 10 08:34:38 EDT 2015 right now
+
+$ echo The basename is $(basename data/S000/genome.dat)
+The basename is genome.dat
+
+$ echo cp data/S000/genome.dat $(basename data/S000)
+cp data/S000/genome.dat S000
+```
+
+We can re-write our loop to use `basename` to give the proper names out our
+files. When you're doing this exercise, rather than type things out on the
+command line you can edit your commands.sh script and run it. That way you have
+a record of what you've done. 
 
 
+1. Start with a for-loop that loops over all the subject folders in your
+   `data/` folder.
+     > ```sh
+     > $ for i in data/*; do 
+     >     echo $i
+     >   done
+     > ```
 
+2. Each time through the loop, echo a `cp` command that copies the `genome.dat`
+   file to `genomes/`. Don't worry about giving it a name yet. 
+     > ```sh
+     > $ for i in data/*; do 
+     >     cp $i/genome.dat genomes/
+     >   done
+     > ```
+
+3. Now use `basename` to get the subject folder name (i.e. turn
+   `data/S015` into `S015`) using the `$(...) notation so that we can use that
+   in the name of the target file we're copying to.  
+     > ```sh
+     > $ for i in data/*; do 
+     >     cp $i/genome.dat genomes/$(i)_genome.dat
+     >   done
+     > ```
