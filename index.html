@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "CAMH Computing Skills Workshops 2014"
+title: "CAMH Computing Skills Workshops 2015"
 ---
 
 <section class="content">
@@ -12,19 +12,39 @@ title: "CAMH Computing Skills Workshops 2014"
   If you have questions, send me email: <a
   href="email:jon.pipitone@camh.ca">jon.pipitone@camh.ca</a>.</p>
 
-  <h1 class="thin">Workshop Notes</h1>
-  <ul class="listing">
-    {% for post in site.posts %}
-      <li>
-      <span>{{ post.date | date: "%B %e, %Y" }}</span>
-      <a href="{{ site.baseurl }}/{{ post.url }}">{{ post.title }}</a>
-      </li>
-    {% endfor %}
-  </ul>
 
-  <h1 class="thin">Upcoming Workshops</h1>
+  <hr/>
+  <h1 class="thin">Workshops</h1>
 
-  {% capture schedule %}{% include schedule.md %}{% endcapture %}
-  {{ schedule | markdownify }}
-
+  <p>Arrive up to 30 minutes in advance if you need help getting software set up.</p>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Date / Location</th>
+      </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>Gentle Introduction to Linux</td>
+      <td>March 3/5, 2015, 12-2pm (CS 163/RS T321)</td>
+    </tr>
+    <tr>
+      <td><a href="shell-intro">Introduction to Linux Shell</a></td>
+      <td>March 10, 2015, 10am-12pm (RS 2062)</td>
+    </tr>
+    <tr>
+      <td>Shell scripting and automation</td>
+      <td>March 17, 2015, 10am-12pm (RS 2062)</td>
+    </tr>
+    <tr>
+      <td>Introduction to R</td>
+      <td>March 24, 2015, 10am-12pm (RS 2062)</td>
+    </tr>
+    <tr>
+      <td>Introduction to Python</td>
+      <td>March 31, 2015, 10am-12pm (RS 2062)</td>
+    </tr>
+    </tbody>
+  </table>
 </section>
