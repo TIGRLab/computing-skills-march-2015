@@ -35,6 +35,9 @@ cd jon_pipitone
 bash ~jpipitone/make-data.sh
 ```
 
+The `make-data.sh` script can be found here: 
+https://raw.githubusercontent.com/pipitone/computing-skills/7128668508a8495d302bed5f396c7bb0b732961c/bin/make-data.sh
+
 ### Exploring the data
 The script you ran generates a phoney dataset of imaging and genetics data for
 a number of subjects in a folder called `data`. Have a look around.

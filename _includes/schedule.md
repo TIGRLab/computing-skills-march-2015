@@ -1,3 +1,8 @@
+
+
+
+
+
 #### Gentle Introduction to Linux
 - **Date:** Tuesday, March 3, 2015, 12:00 pm to 2:00 pm (next week!)
 - **Location:** Room 163, 1st Floor, 250 College St.
