@@ -1,9 +1,9 @@
 ### Introduction to the Linux Shell
 
 **Motivation:** The shell is one of the most basic ways you can interact with a
-computer and it allows you to automate your. It is often the *only* way to
-interact with scientific computing environments (e.g. SCC, SciNet), so you'll
-have to learn it eventually. 
+computer and it allows you to automate your analysis. It is often the *only*
+way to interact with scientific computing environments (e.g. SCC, SciNet), so
+you'll have to learn it eventually. 
 
 **Prerequisites:** Minimal familiarity with the shell (e.g. you should know
 what the commands `cd`, `ls`, `mv`, `cp`, `rm` and `man` do).
