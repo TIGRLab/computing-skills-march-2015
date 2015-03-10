@@ -8,12 +8,16 @@ have to learn it eventually.
 **Prerequisites:** Minimal familiarity with the shell (e.g. you should know
 what the commands `cd`, `ls`, `mv`, `cp`, `rm` and `man` do).
 
-Readings: 
-
- - [SWC: Files and Directories](http://swcarpentry.github.io/shell-novice/01-filedir.html)
 
 **What you will learn:** Running commands on many files (globbing, looping, if
 statements), reading and writing to files, sorting/filtering data in files
+
+Things to read: 
+
+- [SWC: Novice Shell Workshop](http://swcarpentry.github.io/shell-novice)
+- [SWC: Bash Reference](http://swcarpentry.github.io/shell-novice/reference.html)
+- [Bash Cheat Sheet](http://pipitone.github.io/computing-skills/bash-cheat-sheet)
+- [Slides: Intro to Shell](https://docs.google.com/presentation/d/1HawszQmhH4c2YCoOmFWgOlWpxw0-O8LVO6mPtneG7cI/edit?usp=sharing)
 
 --------
 
