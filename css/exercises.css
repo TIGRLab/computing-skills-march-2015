@@ -1,17 +1,19 @@
 /** Styles for writing answers that are revealed on hover */
 
-blockquote {
-  border-left: 2px solid #FFEB8E;
-  padding: 0px 0px; 
-}
+@media screen {
+  blockquote {
+    border-left: 2px solid #FFEB8E;
+    padding: 0px 0px; 
+  }
 
-blockquote div {
-  border-left: 2px solid #FFEB8E;
-  transition: opacity 0.2s ease-in 0s;
-  opacity: 0.0;
-}
+  blockquote div {
+    border-left: 2px solid #FFEB8E;
+    transition: opacity 0.2s ease-in 0s;
+    opacity: 0.0;
+  }
 
-blockquote:hover div {
-  transition: opacity 0.2s ease-in 0s;
-  opacity: 1.0;
+  blockquote:hover div {
+    transition: opacity 0.2s ease-in 0s;
+    opacity: 1.0;
+  }
 }
