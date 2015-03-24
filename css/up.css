@@ -2060,9 +2060,8 @@ a.thumbnail.active { border-color: #428bca }
 .fa-turkish-lira:before,
 .fa-try:before { content: "\f195" }
 .fa-plus-square-o:before { content: "\f196" }
-.highlight,
-pre,
-.highlight pre { background-color: #002b36;color:#93a1a1;border-radius:4px }
+/* 
+.highlight, pre, .highlight pre { background-color: #DDDFE0;color:#93a1a1;border-radius:4px }
 .highlight .c { color: #586e75 }
 .highlight .err { color: #93a1a1 }
 .highlight .g { color: #93a1a1 }
@@ -2131,6 +2130,7 @@ pre,
 .highlight .vg { color: #268bd2 }
 .highlight .vi { color: #268bd2 }
 .highlight .il { color: #2aa198 }
+*/
 body { padding-top: 50px }
 h1,
 h2,
