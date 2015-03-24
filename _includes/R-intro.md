@@ -94,6 +94,9 @@ data$sex
 summary(data$sex)
 summary(data)
 
+mean(data$Age)
+sd(data$Age)
+max(data$Age)
 
 # Converting
 data$dx = as.factor(data$dx)
@@ -101,6 +104,15 @@ as.numeric(data$dx)
 ```
 
 ### Merge and filter
+
+Grabbing parts of a data.frame by indices: 
+
+```r
+data[1:10,]            # rows 1-10
+data[,1:10]            # columns 1-10
+data[c(1,4,7),]        # rows 1,4 and 7
+data$SubjectID[1:10]   # first 10 subject IDs 
+```
 
 Filter/subset: 
 
