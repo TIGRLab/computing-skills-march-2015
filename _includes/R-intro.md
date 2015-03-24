@@ -16,6 +16,7 @@ Things to read:
 
 - [SWC: Programming with R](http://swcarpentry.github.io/r-novice-inflammation)
 - [Quick-R](http://www.statmethods.net/)
+- [Cookbook for R](http://www.cookbook-r.com)
 - [ggplot2 plotting library docs](http://docs.ggplot2.org/current/)
 - [R Cheat Sheet](http://cran.r-project.org/doc/contrib/Short-refcard.pdf)
 - [An Introduction to Statistical Learning -- with applications in R](http://www-bcf.usc.edu/~gareth/ISL/)
@@ -51,6 +52,18 @@ Before we go any further, open a new R script file: `File->New File->RScript`.
 We'll use this to put our R code in as we go. Save the blank file to somewhere
 sensible (e.g. your Desktop, your Documents folder). Call it `workshop.R`. 
 
+### The very basics
+
+
+```r
+1+5
+weight <- 5     # Notice what happens in the Environment tab
+weight
+weight = 5      # -> and = are mostly equivalent
+```
+
+Highlight a command in the script editor, and run it using `ctrl-enter`. 
+
 ### Loading data
 
 Loading CSV data in R is easy using the `read.csv()` function: 
@@ -80,27 +93,46 @@ R has several data types. You should at least know about:
    first element: `a[[1]]`. Lists can also be "named lists", e.g. `heights =
    list(alice=180,bob=160,charlie=165)`, and reference: `heights[["alice"]]`,
    or `heights$alice`
- - Factors: a nominal vector.  `gender = factor(c("M","F"))`
- - Data frames: a table-like data structure with named columns and rows.
-   Somewhat like a list of lists/vectors/factors. 
+ - Factors: a nominal vector.  `gender = factor(c("M","F"))`, `levels(gender)`
+ - Data frames (`data.frame`): the *de facto* table-like data structure with
+   named columns and rows.  Somewhat like a list of lists/vectors/factors. 
 
-More on data.frames:
+### More on dataframes
 
 ```r
-# Getting one column (like a list)
+head(data)
+str(data) 
+summary(data)
+
+nrow(data)
+ncol(data)
+dim(data)
+length(data)
+names(data)
+
+# Getting data from a data.frame
 data$dx
 data$sex
 
 summary(data$sex)
-summary(data)
+table(data$sex)
+
+str(data$sex)
+str(data$SubjectID)
+
+levels(data$sex)
+nlevels(data$sex)
 
 mean(data$Age)
 sd(data$Age)
 max(data$Age)
 
 # Converting
-data$dx = as.factor(data$dx)
-as.numeric(data$dx)
+data$DX = factor(data$dx)
+
+# recoding factors
+data$DX = factor(data$dx,levels=c("0","1"),labels=c("ctrl","case"))
+levels(data$DX) = c("control","case")   # warning
 ```
 
 ### Merge and filter
@@ -108,10 +140,17 @@ as.numeric(data$dx)
 Grabbing parts of a data.frame by indices: 
 
 ```r
+# each of these creates a new data.frame object
 data[1:10,]            # rows 1-10
 data[,1:10]            # columns 1-10
 data[c(1,4,7),]        # rows 1,4 and 7
+
+# data from just one column
 data$SubjectID[1:10]   # first 10 subject IDs 
+
+# 1:10 is a "range"
+seq(1,10)
+
 ```
 
 Filter/subset: 
@@ -129,6 +168,7 @@ eth2 = subset(data, ethnicity == 2)
 eth1_2 = rbind(eth1,eth2)
 
 # more complex subsets
+females_eth1 = subset(females, ethnicity == 1) 
 females_eth1 = subset(data, sex == "F" & ethnicity == 1) 
 ```
 
@@ -142,9 +182,10 @@ merged = merge(data, gi)
 merged_all_x = merge(data, gi, all.x = T)
 ```
 
-## Linear models
+## Some statistics
 
 ```r
+
 fit = lm(cerebral_vol_l ~ Age, data = data)
 summary(fit)
 
@@ -170,4 +211,14 @@ ggplot(data = data, aes(x=Age, y=cerebral_vol_l)) + geom_point() + geom_smooth(m
 # histogram 
 hist(data$cerebral_vol_l)
 ggplot(data, aes(x=cerebral_vol_l)) + geom_histogram()
+
+# PDF (can also manually use export in RStudio)
+pdf("histogram.pdf")
+hist(data$cerebral_vol_l)
+dev.off()
+
+?barplot
+?boxplot
+?plot.default
+
 ```
