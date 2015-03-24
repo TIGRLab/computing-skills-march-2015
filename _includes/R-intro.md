@@ -23,11 +23,16 @@ Things to read:
 
 ### Getting started
 
+Workshop backchannel questions:
+https://etherpad.mozilla.org/YMdULxOqGA
+
 In this workshop you'll need the following software installed on your computer: 
 
 - [R](http://cran.utstat.utoronto.ca/) programming system 
 - [Rstudio](http://www.rstudio.com/products/rstudio/download/) development
   "environment". It's a fancy tool that makes programming in R much better. 
+
+
 
 Once installed, launch Rstudio and follow along. 
 
