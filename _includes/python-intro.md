@@ -14,25 +14,32 @@ dictionaries of data, numpy/scipy basics
 Things to read: 
 
 - [Software Carpentry: Programming with Python](http://swcarpentry.github.io/python-novice-inflammation/)
+
   Intro to Python for scientists. 
 
 - [Codecademy: Python](http://www.codecademy.com/en/tracks/python) 
+
   An online and interactive course teaching language fundamentals, but not
   immediately practical stuff. 
 
 - [Python for MATLAB users](http://wiki.scipy.org/NumPy_for_Matlab_Users)
+
   A "decoder ring" for NumPy if you already know MATLAB
 
 - [NumPy Tutorial](http://wiki.scipy.org/Tentative_NumPy_Tutorial)
+
   A more detalied walkthrough of NumPy and doesn't assume you know MATLAB. 
   
 - [Dive Into Python Book](http://www.diveintopython.net/)
+
   Really good book on basic Python if you're already a fluent programmer.  
 
 - [Learn Python The Hard Way Book](http://learnpythonthehardway.org/book/)
+
   Good book (and online course) if you're new to Python and to programming
 
 - [Python 2 Documentation](https://docs.python.org/2/)
+
   The source documentation for Python. Go here to learn the nitty-gritty for
   language features and baked-in modules. 
 
