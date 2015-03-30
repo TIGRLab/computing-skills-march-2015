@@ -19,29 +19,29 @@ Things to read:
 
 - [Codecademy: Python](http://www.codecademy.com/en/tracks/python) 
 
-  An online and interactive course teaching language fundamentals, but not
-  immediately practical stuff. 
+    An online and interactive course teaching language fundamentals, but not
+    immediately practical stuff. 
 
 - [Python for MATLAB users](http://wiki.scipy.org/NumPy_for_Matlab_Users)
 
-  A "decoder ring" for NumPy if you already know MATLAB
+    A "decoder ring" for NumPy if you already know MATLAB
 
 - [NumPy Tutorial](http://wiki.scipy.org/Tentative_NumPy_Tutorial)
 
-  A more detalied walkthrough of NumPy and doesn't assume you know MATLAB. 
+    A more detalied walkthrough of NumPy and doesn't assume you know MATLAB. 
   
 - [Dive Into Python Book](http://www.diveintopython.net/)
 
-  Really good book on basic Python if you're already a fluent programmer.  
+    Really good book on basic Python if you're already a fluent programmer.  
 
 - [Learn Python The Hard Way Book](http://learnpythonthehardway.org/book/)
 
-  Good book (and online course) if you're new to Python and to programming
+    Good book (and online course) if you're new to Python and to programming
 
 - [Python 2 Documentation](https://docs.python.org/2/)
 
-  The source documentation for Python. Go here to learn the nitty-gritty for
-  language features and baked-in modules. 
+    The source documentation for Python. Go here to learn the nitty-gritty for
+    language features and baked-in modules. 
 
 --------
 
@@ -117,7 +117,7 @@ Create a notebook and title it with your name, e.g. "Jon Pipitone".
 A good first task with any new language is to get it to print "Hello World!".
 Doing so makes sure you've got everything set up correctly. 
 
-Type `print "Hello World!" into the first cell, and then from the *Cell* menu,
+Type `print "Hello World!"` into the first cell, and then from the *Cell* menu,
 choose *Run*. 
 
 Some helpful IPython Notebook notes: 
@@ -125,7 +125,7 @@ Some helpful IPython Notebook notes:
 - A **cell** is a container for a snippet of code, or notes. You can choose the
   type of cell from the dropdown menu.
 - Press *Ctrl-Enter* to run the cell. 
-- Press *Escape,h* to display keyboard shortcuts. 
+- Press *Escape, h* to display keyboard shortcuts. 
 
 ### Hello Data
 
