@@ -15,7 +15,7 @@ Things to read:
 
 - [Software Carpentry: Programming with Python](http://swcarpentry.github.io/python-novice-inflammation/)
 
-  Intro to Python for scientists. 
+    Intro to Python for scientists. 
 
 - [Codecademy: Python](http://www.codecademy.com/en/tracks/python) 
 
