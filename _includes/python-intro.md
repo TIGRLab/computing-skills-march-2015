@@ -43,6 +43,10 @@ Things to read:
     The source documentation for Python. Go here to learn the nitty-gritty for
     language features and baked-in modules. 
 
+
+--------
+Workshop Wifi: `workshop`
+Workshop website: http://pipitone.github.com/computing-skills
 --------
 
 ## Why Python
