@@ -45,8 +45,11 @@ Things to read:
 
 
 --------
-Workshop Wifi: `workshop`
-Workshop website: http://pipitone.github.com/computing-skills
+
+- Workshop Wifi: `workshop`
+
+- Workshop website: http://pipitone.github.com/computing-skills
+
 --------
 
 ## Why Python
