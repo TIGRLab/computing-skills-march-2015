@@ -108,7 +108,7 @@ it to something you'll remember later, e.g. "Python Workshop".
 IPython Notebook server running on my computer if you are on the *workshop*
 wifi network by pointing your browser to: 
 
-   http://192.168.1.101:8888
+   http://192.168.1.228:8888
 
 Create a notebook and title it with your name, e.g. "Jon Pipitone". 
 
